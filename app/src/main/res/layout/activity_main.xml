@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="295dp"
+        android:layout_height="40dp"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textSize="33dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051" />
+
+    <Button
+        android:id="@+id/ScanButton"
+        android:layout_width="339dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="16dp"
+        android:text="ScanButton"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="36dp" />
+
+    <Button
+        android:id="@+id/FoodListButton"
+        android:layout_width="339dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="16dp"
+        android:text="FoodList"
+        app:layout_constraintTop_toBottomOf="@+id/ScanButton"
+        tools:layout_editor_absoluteX="35dp" />
+
+    <Switch
+        android:id="@+id/notification_switch"
+        android:layout_width="187dp"
+        android:layout_height="43dp"
+        android:text="notification get"
+        tools:layout_editor_absoluteX="187dp"
+        tools:layout_editor_absoluteY="218dp" />
+
+    <TextView
+        android:id="@+id/TextFoodList"
+        android:layout_width="335dp"
+        android:layout_height="397dp"
+        android:text="TextFoodList"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="287dp">
+
+    </TextView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
