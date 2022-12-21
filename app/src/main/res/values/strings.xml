@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">FoodInFridgeApp</string>
+    <string name="ScanButton">ScanButton</string>
+    <string name="notification_switch">notifications</string>
+    <string name="TextFoodList">TextFoodList</string>
     <string name="def">Def</string>
+    <string name="FoodList">FoodList</string>
+
 </resources>
