@@ -1,9 +1,21 @@
 <resources>
-    <string name="app_name">FoodInFridgeApp</string>
-    <string name="ScanButton">ScanButton</string>
+    <string name="app_name">Apte4ka</string>
+    <string name="ScanButton">Scan</string>
     <string name="notification_switch">notifications</string>
-    <string name="TextFoodList">TextFoodList</string>
+    <string name="TextFoodList">...</string>
     <string name="def">Def</string>
-    <string name="FoodList">FoodList</string>
+    <string name="FoodList">Add</string>
+    <string name="FoodListEditHint">Name</string>
+    <string name="FoodListEditDataHint">YYYY-MM-DD</string>
+    <string name="permission_camera_rationale">true</string>
+    <string name="ok">ok</string>
+    <string name="low_storage_error">low_storage_error</string>
+    <string name="no_camera_permission">true</string>
+    <string name="BackButton">Back</string>
+    BackButton
+
+
+
+
 
 </resources>

@@ -8,82 +8,106 @@
 
     <TextView
         android:id="@+id/app_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="357dp"
+        android:layout_height="33dp"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
         android:layout_marginTop="8dp"
-        android:text="@string/app_name"
         android:layout_marginBottom="8dp"
-        android:textAlignment="center"
-        android:textSize="48sp" />
+        android:text="@string/app_name"
+        android:textAlignment="center" />
+
 
     <Button
         android:id="@+id/ScanButton"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/FoodListEditText"
-        android:layout_alignStart="@+id/app_name"
+
+        android:layout_below="@+id/FoodListEditData"
+
         android:layout_centerInParent="true"
+        android:layout_toEndOf="@+id/addProductButton"
+        android:onClick="startScanText"
         android:text="@string/ScanButton"
         android:textAlignment="center" />
-
 
     <Button
         android:id="@+id/addProductButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/app_name"
+
+        android:layout_below="@+id/FoodListEditData"
+
         android:layout_alignStart="@+id/app_name"
+
         android:layout_centerInParent="true"
-        android:text="@string/FoodList" />
+        android:enabled="true"
+        android:text="@string/FoodList"
+        android:visibility="visible" />
 
     <EditText
         android:id="@+id/FoodListEditText"
-        android:layout_marginEnd="8dp"
-        android:layout_width="wrap_content"
+        android:layout_width="348dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/app_name"
+        android:layout_alignStart="@+id/app_name"
         android:layout_alignEnd="@+id/app_name"
-        android:layout_toEndOf="@+id/ScanButton"
-        android:layout_centerInParent="true"
+        android:enabled="true"
+        android:hint="@string/FoodListEditHint"
+        android:minHeight="48dp"
         android:text=""
-        android:autofillHints="Add food to fridge" />
+        android:visibility="visible" />
 
+    <EditText
+        android:id="@+id/FoodListEditData"
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
 
+        android:layout_below="@+id/FoodListEditText"
+
+        android:layout_alignStart="@+id/app_name"
+        android:layout_alignEnd="@+id/app_name"
+
+        android:layout_centerInParent="true"
+        android:enabled="true"
+        android:hint="@string/FoodListEditDataHint"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:text=""
+        android:visibility="visible" />
 
     <Switch
         android:id="@+id/notification_switch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/FoodListEditText"
-        android:layout_alignEnd="@+id/FoodListEditText"
-        android:layout_toStartOf="@+id/ScanButton"
-        android:minHeight="48dp"
+
+        android:layout_below="@+id/FoodListEditData"
+        android:layout_alignEnd="@+id/app_name"
+
+
+        android:layout_toEndOf="@+id/ScanButton"
         android:text="@string/notification_switch"
-        android:textSize="14sp"
+        android:textSize="20sp"
         tools:ignore="SmallSp,UseSwitchCompatOrMaterialXml" />
 
     <ScrollView
+        android:id="@+id/scrollable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/notification_switch"
 
-        android:layout_centerInParent="true">
+        android:layout_below="@+id/ScanButton"
+        android:layout_alignStart="@+id/app_name"
+        android:layout_alignEnd="@+id/app_name"
+        android:layout_toEndOf="@+id/app_name">
 
         <TextView
             android:id="@+id/TextFoodList"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/TextFoodList" />
 
+
     </ScrollView>
-
-
-
-
 
 
 </RelativeLayout>
