@@ -28,15 +28,13 @@ import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
-//import android.support.annotation.NonNull;
-//import android.support.design.widget.Snackbar;
-//import android.support.v4.app.ActivityCompat;
-//import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -50,10 +48,6 @@ import com.example.foodinfridgeapp.ocrreader.ui.camera.CameraSourcePreview;
 import com.example.foodinfridgeapp.ocrreader.ui.camera.GraphicOverlay;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
-//import com.google.android.gms.samples.vision.ocrreader.ui.camera.CameraSource;
-//import com.google.android.gms.samples.vision.ocrreader.ui.camera.CameraSourcePreview;
-//import com.google.android.gms.samples.vision.ocrreader.ui.camera.GraphicOverlay;
-//import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.text.TextBlock;
 import com.google.android.gms.vision.text.TextRecognizer;
 import com.google.android.material.snackbar.Snackbar;
@@ -61,7 +55,6 @@ import com.google.android.material.snackbar.Snackbar;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Locale;
-import java.util.Set;
 
 /**
  * Activity for the Ocr Detecting app.  This app detects text and displays the value with the
@@ -93,6 +86,9 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     // A TextToSpeech engine for speaking a String value.
     private TextToSpeech tts;
     private HashSet<String> name_data = new HashSet<>();
+
+    private EditText foodList_edit;
+    private Button backButton;
 
 
 
@@ -385,6 +381,15 @@ public final class OcrCaptureActivity extends AppCompatActivity {
                     name_data.clear();
                     name_data.add(text_value);
                     System.out.println(name_data);
+
+                    foodList_edit = findViewById(R.id.FoodListEditText);
+                    foodList_edit.setText(text_value);
+
+                    backButton = findViewById(R.id.backButton);
+                    backButton.setPressed(true);
+
+
+
                 } catch (Exception err)
                 {
                     System.out.println(err);
