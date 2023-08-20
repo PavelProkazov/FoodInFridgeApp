@@ -85,7 +85,7 @@ public final class OcrCaptureActivity extends AppCompatActivity {
 
     // A TextToSpeech engine for speaking a String value.
     private TextToSpeech tts;
-    private HashSet<String> name_data = new HashSet<>();
+    public HashSet<String> name_data = new HashSet<>();
 
     private EditText foodList_edit;
     private Button backButton;
@@ -382,12 +382,8 @@ public final class OcrCaptureActivity extends AppCompatActivity {
                     name_data.add(text_value);
                     System.out.println(name_data);
 
-                    foodList_edit = findViewById(R.id.FoodListEditText);
-                    foodList_edit.setText(text_value);
-
-                    backButton = findViewById(R.id.backButton);
-                    backButton.setPressed(true);
-
+                    Intent intent = new Intent(this, MainActivity.class);
+                    startActivity(intent);
 
 
                 } catch (Exception err)

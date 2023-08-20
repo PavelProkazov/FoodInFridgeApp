@@ -100,7 +100,7 @@
         android:layout_alignEnd="@+id/app_name"
         android:layout_toEndOf="@+id/app_name">
 
-        <TextView
+        <ListView
             android:id="@+id/TextFoodList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

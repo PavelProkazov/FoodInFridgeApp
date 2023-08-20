@@ -12,7 +12,8 @@
     <string name="low_storage_error">low_storage_error</string>
     <string name="no_camera_permission">true</string>
     <string name="BackButton">Back</string>
-    BackButton
+    <string name="no_text_input">Input name and expire date </string>
+
 
 
 
